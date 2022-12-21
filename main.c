@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 13:58:32 by adrperez          #+#    #+#             */
-/*   Updated: 2022/12/21 16:45:30 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/12/21 16:49:47 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,19 @@ int	main(void)
 	char c_mio = 'h';
 	char* s_original = "hola";
 	char* s_mio = "hola";
+	int d_original = -2147483648;
+	int d_mio = -2147483648;
 	int i_original = -2147483648;
 	int i_mio = -2147483648;
+	unsigned int u_original = -2147483648;
+	unsigned int u_mio = -2147483648;
 	
 	printf("Original: \n");
-	printf("%d", printf("%d\n", i_original));
+	printf("%i", printf("%u\n", u_original));
 	
 	printf("\n-----\n");
 	
 	printf("Mío: \n");
-	printf("%d", ft_printf("%d\n", i_mio));
+	printf("%i", ft_printf("%u\n", u_mio));
 	
 }

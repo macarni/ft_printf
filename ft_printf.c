@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 13:59:37 by adrperez          #+#    #+#             */
-/*   Updated: 2022/12/21 15:43:44 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/12/21 16:51:04 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ static int	ft_convert(va_list	args, char type)
 		return(ft_print_char(va_arg(args, int)));
 	if (type == 's')
 		return(ft_print_string(va_arg(args, char*)));
-	if (type == 'd')
+	if (type == 'd' || type == 'i')
 		return(ft_print_number(va_arg(args, int)));
+	if (type == 'u')
+		return(ft_print_unsigned(va_arg(args, unsigned int)));
 	return (0);
 }
 
