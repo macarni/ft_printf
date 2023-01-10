@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 13:58:32 by adrperez          #+#    #+#             */
-/*   Updated: 2022/12/21 16:49:47 by adrperez         ###   ########.fr       */
+/*   Updated: 2023/01/10 12:59:07 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,52 @@
 #include <unistd.h>
 #include "ft_printf.h"
 
+
 int	main(void)
 {
-	char c_original = 'h';
-	char c_mio = 'h';
-	char* s_original = "hola";
-	char* s_mio = "hola";
-	int d_original = -2147483648;
-	int d_mio = -2147483648;
-	int i_original = -2147483648;
-	int i_mio = -2147483648;
-	unsigned int u_original = -2147483648;
-	unsigned int u_mio = -2147483648;
+	int i = -2147483648;
+	unsigned int u = -2147483648;
+	int x = -214748;
+	char p = '1';
 	
-	printf("Original: \n");
-	printf("%i", printf("%u\n", u_original));
+	printf("\nOriginal: \n");
+	printf("%i", printf("%u\n", u));
+	printf("\nMío: \n");
+	printf("%i", ft_printf("%u\n", u));
 	
-	printf("\n-----\n");
+	printf("\n-----");
+
+	printf("\nOriginal: \n");
+	printf("%i", printf("%i\n", i));
+	printf("\nMío: \n");
+	printf("%i", ft_printf("%i\n", i));
+
+	printf("\n-----");
+
+	printf("\nOriginal: \n");
+	printf("%i", printf("%x\n", x));
+	printf("\nMío: \n");
+	printf("%i", ft_printf("%x\n", x));
+
+	printf("\n-----");
+
+	printf("\nOriginal: \n");
+	printf("%i", printf("%%\n"));
+	printf("\nMío: \n");
+	printf("%i", ft_printf("%%\n"));
+
+	printf("\n-----");
+
+	printf("\nOriginal: \n");
+	printf("%i", printf("%p\n", &p));
+	printf("\nMío: \n");
+	printf("%i", ft_printf("%p\n", &p));
 	
-	printf("Mío: \n");
-	printf("%i", ft_printf("%u\n", u_mio));
+	printf("\n-----");
+
+	printf("\nOriginal: \n");
+	printf("%i", printf("NULL %s NULL\n", NULL));
+	printf("\nMío: \n");
+	printf("%i", ft_printf("NULL %s NULL\n", NULL));
 	
 }

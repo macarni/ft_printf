@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:02:45 by adrperez          #+#    #+#             */
-/*   Updated: 2022/12/21 15:36:39 by adrperez         ###   ########.fr       */
+/*   Updated: 2023/01/10 13:11:49 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,17 @@ int	ft_print_char(int character)
 	return (1);
 }
 
-int	ft_print_string(char* string)
+int	ft_print_string(char *string)
 {
 	int	length;
 	int	i;
 
 	i = 0;
 	length = 0;
-	while(string[i])
-	{	
+	if (!string)
+		return (ft_print_string("(null)"));
+	while (string[i])
+	{
 		ft_print_char(string[i]);
 		i++;
 		length++;
