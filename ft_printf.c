@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 13:59:37 by adrperez          #+#    #+#             */
-/*   Updated: 2023/01/11 10:34:09 by adrperez         ###   ########.fr       */
+/*   Updated: 2023/01/11 12:00:51 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ static int	ft_convert(va_list	args, char type)
  */
 int	ft_printf(char const *string, ...)
 {
-	//Se definen los parámetros anónimos (...) de la función
+	//Se definen los parámetros anónimos (...) de la función variadica
 	va_list	args;
 	int		i;
 	int		length;
