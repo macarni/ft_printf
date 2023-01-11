@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 13:58:32 by adrperez          #+#    #+#             */
-/*   Updated: 2023/01/10 15:17:33 by adrperez         ###   ########.fr       */
+/*   Updated: 2023/01/11 10:12:40 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,18 @@
 int	main(void)
 {
 	int i = -2147483648;
-	unsigned int u = -2147483648;
+	unsigned int u = 122147;
 	int x = -214748;
-	char p = '1';
+	char p = '0';
 	char *s = "Hello word!";
 	
+	printf("\n\nChar: ");
+
+	printf("\nOriginal: \n");
+	printf("%i", printf("%c\n", p));
+	printf("\nMío: \n");
+	printf("%i", ft_printf("%c\n", p));
+
 	printf("\n\nString: ");
 
 	printf("\nOriginal: \n");
@@ -36,6 +43,13 @@ int	main(void)
 	printf("%i", printf("%u\n", u));
 	printf("\nMío: \n");
 	printf("%i", ft_printf("%u\n", u));
+
+	printf("\n\nUnsigned int (pasandole un int negativo): ");
+	
+	printf("\nOriginal: \n");
+	printf("%i", printf("%u\n", x));
+	printf("\nMío: \n");
+	printf("%i", ft_printf("%u\n", x));
 	
 	printf("\n\nInt: ");
 
